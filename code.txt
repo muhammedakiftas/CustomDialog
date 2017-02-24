@@ -1,0 +1,29 @@
+	// custom dialog
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.setContentView(R.layout.custom);
+        dialog.setTitle("Önceki Veriler ...");
+
+        // set the custom dialog components - text, image and button
+        TextView text = (TextView) dialog.findViewById(R.id.text);
+        text.setText("Önceki Düðümleri eklemek ister misiniz Önceki Düðümleri eklemek ister misiniz ?");
+        ImageView image = (ImageView) dialog.findViewById(R.id.image);
+        image.setImageResource(R.mipmap.ic_launcher);
+
+        Button dialogButton = (Button) dialog.findViewById(R.id.dialogButtonOK);
+        // if button is clicked, close the custom dialog
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        Button dialogButton2 = (Button) dialog.findViewById(R.id.dialogButtonCANCEL);
+        // if button is clicked, close the custom dialog
+        dialogButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
